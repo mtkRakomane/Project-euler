@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabs Example</title>
+
+<link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Tab1')" id="defaultOpen">Tab 1</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</button>
+  <button class="tablinks" onclick="openTab(event, 'Tab3')">Tab 3</button>
+</div>
+
+<div id="Tab1" class="tabcontent">
+  <p>Find The sum of all the multiples of 3 or 5 below 1000: <input></p>
+  
+</div>
+
+<div id="Tab2" class="tabcontent">
+  <p>By considering the terms in the Fibonacci sequence whose values do not exceed (Value), find the sum of the even-valued terms: <input></p>
+</div>
+
+<div id="Tab3" class="tabcontent">
+  <p>What is the largest prime factor of the number(value): <input></p>
+</div>
+
+<script>
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+  function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+</script>
+
+</body>
+</html>
