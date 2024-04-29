@@ -11,6 +11,9 @@
 
 </head>
 <body>
+    <header>
+       <h4>PROBLEM EULER</h4>
+    </header>
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Tab1')" id="defaultOpen">Problem 1</button>
@@ -20,18 +23,26 @@
 
 <div id="Tab1" class="tabcontent">
     <h1>Multiples of 3 or 5.</h1>
-  <p>Find The sum of all the multiples of 3 or 5 below 1000: <input></p>
-  
+  <p id="numInput">Find The sum of all the multiples of 3 or 5 below 1000: </p>
+  <input class="number" type="number" id="num1">
+  <button class="answer" onclick="displayAnswer()" >Answer 1: </button>
+
 </div>
 
 <div id="Tab2" class="tabcontent">
     <h2>Even Fibonacci Numbers.</h2>
-  <p>By considering the terms in the Fibonacci sequence whose values do not exceed (Value), find the sum of the even-valued terms: <input></p>
+  <p>By considering the terms in the Fibonacci sequence whose values do not exceed (Value), find the sum of the even-valued terms:</p>
+  <input type="number" id="limitInput" placeholder="Enter a value">
+  <button onclick="calculateFibonacciSum()">Calculate Sum</button>
+  <p id="evenResults"></p>
 </div>
 
 <div id="Tab3" class="tabcontent">
     <h3>Largest Prime Factor.</h3>
-  <p>What is the largest prime factor of the number(value): <input></p>
+  <p>What is the largest prime factor of the number(value): </p>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="calculateLargestPrimeFactor()">Find Largest Prime Factor</button>
+    <p id="primeResult"></p>
 </div>
 
 <script src="script.js" charset="utf-8"></script>
