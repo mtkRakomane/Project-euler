@@ -23,24 +23,29 @@
 
 <div id="Tab1" class="tabcontent">
     <h1>Multiples of 3 or 5.</h1>
-  <p id="numInput">Find The sum of all the multiples of 3 or 5 below 1000: </p>
-  <input class="number" type="number" id="num1">
-  <button class="answer" onclick="displayAnswer()" >Answer 1: </button>
-
+  <p>Find The sum of all the multiples of 3 or 5 below 1000: </p>
+  <input class="number" type="number" id="num1" data-bs-toggle="tooltip" title="Enter number" placeholder="Enter a value">
+  <button class="answer" onclick="calculateSum()" data-bs-toggle="tooltip"
+  title="Sum!">Sum: </button>
+<p id="multipleResults"></p>
 </div>
+
+
 
 <div id="Tab2" class="tabcontent">
     <h2>Even Fibonacci Numbers.</h2>
   <p>By considering the terms in the Fibonacci sequence whose values do not exceed (Value), find the sum of the even-valued terms:</p>
-  <input type="number" id="limitInput" placeholder="Enter a value">
+  <input type="number" id="limitInput" placeholder="Enter a value" data-bs-toggle="tooltip" title="Enter limit">
   <button onclick="calculateFibonacciSum()">Calculate Sum</button>
   <p id="evenResults"></p>
 </div>
 
+
+
 <div id="Tab3" class="tabcontent">
     <h3>Largest Prime Factor.</h3>
   <p>What is the largest prime factor of the number(value): </p>
-  <input type="number" id="numberInput" placeholder="Enter a number">
+  <input type="number" id="numberInput" placeholder="Enter a number" data-bs-toggle="tooltip" title="Enter limit">
     <button onclick="calculateLargestPrimeFactor()">Find Largest Prime Factor</button>
     <p id="primeResult"></p>
 </div>
